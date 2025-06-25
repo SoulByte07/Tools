@@ -2,9 +2,9 @@
 setlocal enabledelayedexpansion
 
 :: Set directories
-set "ADB_PATH=C:\Tools\Android\adb"
-set "APK_DIR=C:\Users\soul\99_Archive\Backups\APK extractor"
-set "LOG_DIR=C:\Logs\Android\ADB\APK Installs"
+set "ADB_PATH=(example= C:/adb)"
+set "APK_DIR=(exampple= C:/Users/username/Backups/APKs)"
+set "LOG_DIR=(example= C:\Logs)"
 
 :: Create log directory if it doesn't exist
 if not exist "%LOG_DIR%" mkdir "%LOG_DIR%"
@@ -20,10 +20,10 @@ for /f "tokens=1-2 delims=: " %%a in ("%time%") do (
 :: Set log file name
 set "LOG_FILE=%LOG_DIR%\Bulk_APK_Installs_%DATE%_%TIME%.txt"
 
-:: Add adb to PATH temporarily
+:: Add adb to PATH temporarily because you may get an error message like 'adb doesnt recoginsed as internal and external command'
 set "PATH=%ADB_PATH%;%PATH%"
 
-:: Initialize failed list
+:: Initialize failed list to list out the APKs that are failed
 set "FAILED_LIST="
 
 echo [INFO] Starting APK installations... > "%LOG_FILE%"
