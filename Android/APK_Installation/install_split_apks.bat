@@ -1,10 +1,16 @@
 @echo off
 setlocal EnableDelayedExpansion
 
-:: === SET PATHS ===
-set "ADB_PATH=<example= C:\adb> "
-set "APK_DIR=<eample= C:\Users\username\Backups\Split_APKs> "
-set "LOG_DIR=<eample= C:\Logs> "
+:: Set base path
+set "BASE_PATH=%~dp0"
+
+:: Remove trailing backslash
+if "%BASE_PATH:~-1%"=="\" set "BASE_PATH=%BASE_PATH:~0,-1%"
+
+:: Set directories
+set "ADB_PATH=%BASE_PATH%\adb"
+set "APK_DIR=%BASE_PATH%\APKs"
+set "LOG_DIR=%BASE_PATH%\Logs"
 
 :: === CREATE LOG FILE ===
 if not exist "%LOG_DIR%" mkdir "%LOG_DIR%"
