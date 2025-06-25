@@ -1,0 +1,15 @@
+[INFO] Starting split APK installation... 
+=============================================== 
+Installing: adb install-multiple "com.whatsapp.apk" 
+Success
+SUCCESS: com.whatsapp
+
+Installing: adb install-multiple "com.youtube_split_1.apk" 
+adb: failed to finalize session
+Failure [INSTALL_FAILED_INVALID_APK: Full install must include a base package]
+ERROR: Failed to install com.youtube_split_1.apk
+
+================================================= 
+[SUMMARY] Failed APK Installations:
+
+youtube 20.1.0 
