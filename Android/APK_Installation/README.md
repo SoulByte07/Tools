@@ -23,6 +23,7 @@ This batch script automates the installation of split APK bundles on Android dev
 
 ## 🗂 Folder Structure
 
+```
 ProjectRoot/
 ├── install_split_apks.bat
 ├── Split_APKs/
@@ -30,7 +31,7 @@ ProjectRoot/
 │ ├── myapp_split_config.en.apk
 │ ├── myapp_split_config.arm64.apk
 └── Logs/
-
+```
 
 ---
 
