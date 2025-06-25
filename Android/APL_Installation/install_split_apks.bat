@@ -2,9 +2,9 @@
 setlocal EnableDelayedExpansion
 
 :: === SET PATHS ===
-set "ADB_PATH=C:\Tools\Android\adb"
-set "APK_DIR=C:\Users\soul\99_Archive\Backups\Android Backup\Backup\App"
-set "LOG_DIR=C:\Logs\Android\ADB\APK Installs"
+set "ADB_PATH=<example= C:\adb> "
+set "APK_DIR=<eample= C:\Users\username\Backups\Split_APKs> "
+set "LOG_DIR=<eample= C:\Logs> "
 
 :: === CREATE LOG FILE ===
 if not exist "%LOG_DIR%" mkdir "%LOG_DIR%"
@@ -16,7 +16,7 @@ set "LOG_FILE=%LOG_DIR%\Split_APK_Installs_%DATE%_%TIME%.txt"
 echo [INFO] Starting split APK installation... > "%LOG_FILE%"
 echo =============================================== >> "%LOG_FILE%"
 
-:: === UPDATE PATH FOR ADB ===
+:: Add adb to PATH temporarily because you may get an error message like 'adb doesnt recoginsed as internal and external command'
 set "PATH=%ADB_PATH%;%PATH%"
 
 :: === MOVE TO APK DIRECTORY ===
