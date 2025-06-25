@@ -16,17 +16,19 @@ This batch script automates the installation of split APK bundles on Android dev
 ## 🧰 Requirements
 
 - [ADB installed](https://developer.android.com/tools/releases/platform-tools)
+- extract that platform-tools inside APK_Installs folder
 - USB Debugging enabled on your Android device
-- Place all `.apk` files in the `Split_APKs` folder
+- Place all `.apk` files in the `APKs` folder
 
 ---
 
 ## 🗂 Folder Structure
 
 ```
-ProjectRoot/
+APK_Installation/
 ├── install_split_apks.bat
-├── Split_APKs/
+├──bulk_apk_installs.bat
+├── APKs/
 │ ├── myapp.apk
 │ ├── myapp_split_config.en.apk
 │ ├── myapp_split_config.arm64.apk
@@ -39,7 +41,7 @@ ProjectRoot/
 
 1. Enable **Developer Options** and **USB Debugging** on your device.
 2. Connect your Android device via USB.
-3. Place all related `.apk` files inside the `Split_APKs` folder.
+3. Place all related `.apk` files inside the `APKs` folder.
 4. Double-click `install_split_apks.bat`.
 5. Follow on-screen instructions. A log file will be saved in the `Logs` folder.
 
