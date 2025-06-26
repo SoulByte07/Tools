@@ -18,7 +18,7 @@ This batch script automates the installation of split APK bundles on Android dev
 - [ADB installed](https://developer.android.com/tools/releases/platform-tools)
 - extract that platform-tools inside APK_Installs folder
 - USB Debugging enabled on your Android device
-- Place all `.apk` files in the `APKs` folder
+- Place all `.apk` files in the `APKs` folder (i place a .gitkeep file to keep an empty folder)
 
 ---
 
@@ -26,6 +26,7 @@ This batch script automates the installation of split APK bundles on Android dev
 
 ```
 APK_Installation/
+├── platform-tools
 ├── install_split_apks.bat
 ├──bulk_apk_installs.bat
 ├── APKs/
@@ -54,6 +55,13 @@ APK_Installation/
 - Calls `adb install-multiple` to install each bundle.
 
 ---
+
+## Debugging
+
+- i have added a BASE_PATH to increase the convinence score of the script.
+- i have temparaly added the adb path to the system PATH to avoid the command issues.
+- i have added a .gitkeep file in the APKs folder, bacause git doesnt accept empth folders
+- Logs will be saved into the Logs folder, to know what was happens at the end.
 
 ## 📜 License
 
